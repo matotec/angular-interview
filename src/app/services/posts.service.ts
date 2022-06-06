@@ -7,8 +7,8 @@ import { Post } from '../objects/post';
   providedIn: 'root'
 })
 export class PostsService {
-
-  constructor(private http: HttpClient, private url:string = 'https://jsonplaceholder.typicode.com/posts') { }
+  private url:string = 'https://jsonplaceholder.typicode.com/posts';
+  constructor(private http: HttpClient) { }
 
   get posts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.url).pipe(map((elem) => elem.slice(0,10)));
