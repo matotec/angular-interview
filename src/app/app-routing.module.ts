@@ -7,7 +7,7 @@ import { PostListComponent } from './post-list/post-list.component';
 export const routes: Routes = [
   { path: '', pathMatch: "full", redirectTo: 'posts'},
   { path: 'posts', component: PostListComponent},
-  { path: 'posts/:id', component: PostDetailComponent},
+  { path: 'post/:id', component: PostDetailComponent},
   { path: '404', component: BadRouteComponent},
   { path: '404/:id', component: BadRouteComponent},
   { path: '**', redirectTo: '404'}

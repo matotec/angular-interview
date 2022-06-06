@@ -1,1 +1,9 @@
-<p>post-detail works!</p>
+<div *ngIf="post">
+    <a class="btn btn-outline-primary" routerLink="/posts">Atras</a>
+    <div class="d-flex justify-content-between">
+        <h1>Detail post: {{post.id}}</h1>
+        <p *ngIf="dateLastComment">Last comment: {{dateLastComment}}</p>
+    </div>
+    <h1>{{post.title}}</h1>
+    <p>{{post.body}}</p>
+</div>
