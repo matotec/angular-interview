@@ -7,6 +7,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { BadRouteComponent } from './bad-route/bad-route.component';
 import { CommentsComponent } from './comments/comments.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommentsComponent } from './comments/comments.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
