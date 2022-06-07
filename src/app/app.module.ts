@@ -8,6 +8,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { BadRouteComponent } from './bad-route/bad-route.component';
 import { CommentsComponent } from './comments/comments.component';
 import { HttpClientModule} from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule} from '@angular/common/http'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

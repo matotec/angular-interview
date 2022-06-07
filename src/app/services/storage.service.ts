@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { Comment } from '../objects/comment';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +23,9 @@ export class StorageService {
     return data ? JSON.parse(data) : [];
   }
 
-  deleteComment(id: number) {
-    localStorage.removeItem(id.toString());
+  deleteComment(comment: Comment,id: number) {
+    const data = this.getComment(id);
+    data.splice(data.findIndex(elem => elem.date === comment.date), 1);
+    this.setComment(id, data);
   }
 }

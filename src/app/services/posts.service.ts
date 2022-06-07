@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { Post } from '../objects/post';
+import { Comment } from '../objects/comment';
 
 @Injectable({
   providedIn: 'root'

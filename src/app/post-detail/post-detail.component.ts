@@ -26,4 +26,8 @@ export class PostDetailComponent implements OnInit {
     })
   }
 
+  sendDate(date: string) {
+    this.dateLastComment = date;
+  }
+
 }
